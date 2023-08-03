@@ -1,0 +1,288 @@
+@media screen and (max-width: 992px) {
+  body {
+    background: #f53838;
+  }
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+  }
+  .overflow-h {
+    overflow: hidden;
+  }
+  section {
+    padding: 50px 0;
+  }
+  .header {
+    display: none;
+  }
+  .small-header {
+    display: block;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100;
+  }
+  .small-header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .small-header .small-nav-button {
+    max-width: 30px;
+    max-height: 30px;
+    height: 100%;
+    width: 100%;
+  }
+  .small-nav-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    right: -100%;
+    top: 0;
+    -webkit-transition: right 400ms ease;
+    transition: right 400ms ease;
+    background: #0b132a;
+    padding: 100px 20px 20px;
+  }
+  .small-nav-container .small-nav-bottom {
+    margin-top: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .small-nav-container .small-nav-bottom svg {
+    width: 24px;
+    height: 24px;
+  }
+  .small-nav-container ul:first-child {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+  }
+  .small-nav-container ul:first-child .nav-item {
+    margin-bottom: 10px;
+    height: 40px;
+  }
+  .small-nav-container ul:first-child .nav-item .nav-link {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .small-nav-container ul:first-child:after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 1px;
+    background: #ffffff;
+    left: 0;
+    bottom: -10px;
+  }
+  .small-nav-container .ul-last {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 40px;
+  }
+  .small-nav-container .ul-last li {
+    margin-bottom: 10px;
+    height: 40px;
+  }
+  .small-nav-container .ul-last li a {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  .entry .container {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .entry .entry-text-content h1 {
+    font-size: 26px;
+    margin: 20px 0;
+  }
+  .entry .entry-text-content p {
+    font-size: 14px;
+  }
+  .entry .entry-text-content .entry-button {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+  }
+  .entry .entry-page {
+    max-width: none;
+  }
+  .entry .entry-page img {
+    width: 100%;
+  }
+  .about {
+    padding-top: 100px;
+  }
+  .about .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .about .container .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .about .container .item img {
+    width: 55px;
+    height: 56px;
+  }
+  .features .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .features .container .features-left {
+    margin-bottom: 20px;
+  }
+  .features .container .features-left img {
+    width: 100%;
+  }
+  .features .container .features-right h2 {
+    font-size: 26px;
+  }
+  .features .container .features-right p {
+    font-size: 14px;
+  }
+  .features .container .features-right ul li {
+    font-size: 14px;
+  }
+  .pricing .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .pricing .container .pricing-header {
+    max-width: 270px;
+    width: 100%;
+    margin: 0 auto 60px;
+  }
+  .pricing .container .pricing-header h2 {
+    font-size: 26px;
+  }
+  .pricing .container .pricing-header p {
+    font-size: 14px;
+  }
+  .pricing .container .item {
+    max-width: 330px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 40px;
+  }
+  .locations .locations-header {
+    max-width: 270px;
+    width: 100%;
+    margin: 0 auto 60px;
+  }
+  .locations .locations-header h2 {
+    font-size: 24px;
+  }
+  .locations .locations-header p {
+    font-size: 14px;
+  }
+  .locations .locations-map {
+    width: 100%;
+  }
+  .locations .locations-map img {
+    width: 100%;
+  }
+  .locations .sponsored .sponsor {
+    max-width: 95px;
+    max-height: 30px;
+  }
+  .locations .sponsored .sponsor img {
+    width: 100%;
+    height: 100%;
+  }
+  .testimonials .testimonial {
+    max-width: none;
+    margin: 0;
+    padding: 15px;
+  }
+  .testimonials .testimonial .customer-name h4 {
+    font-size: 14px;
+  }
+  .testimonials .testimonial .customer-name p {
+    font-size: 14px;
+  }
+  .testimonials .testimonial .testimonial-body {
+    font-size: 14px;
+  }
+  .help .container {
+    position: absolute;
+    left: 0;
+  }
+  .help .subscribe {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+  .help .subscribe .subscribe-left {
+    max-width: 370px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .help .subscribe .subscribe-left h4 {
+    font-size: 26px;
+  }
+  .help .subscribe .subscribe-left p {
+    font-size: 14px;
+  }
+  .help .subscribe .subscribe-right {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .help .subscribe .subscribe-right a {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  footer .container {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .container div:first-child {
+    margin-right: 0;
+    max-width: none;
+  }
+  footer .container div:first-child .social-icons {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .container div:first-child .social-icons a {
+    margin-bottom: 20px;
+  }
+  footer .container div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  footer .container div p {
+    font-size: 14px;
+  }
+  footer .container div h4 {
+    font-size: 16px;
+  }
+  footer .container div ul li {
+    font-size: 14px;
+  }
+  .small-nav-activated {
+    right: 0;
+  }
+}
+
+/*# sourceMappingURL=adaptive.css.map */
