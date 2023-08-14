@@ -1,13 +1,4 @@
-@media screen and (max-width: 992px) {
-  body {
-    background: #f53838;
-  }
-  .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
-  }
+@media screen and (max-width: 991px) {
   .overflow-h {
     overflow: hidden;
   }
@@ -104,6 +95,9 @@
     flex-direction: column;
     flex-direction: column-reverse;
   }
+  .entry .item {
+    max-width: none;
+  }
   .entry .entry-text-content h1 {
     font-size: 26px;
     margin: 20px 0;
@@ -124,6 +118,12 @@
   }
   .about {
     padding-top: 100px;
+  }
+  .about .line-left:before {
+    display: none;
+  }
+  .about .line-right:before {
+    display: none;
   }
   .about .container {
     display: flex;
@@ -178,11 +178,21 @@
   .pricing .container .pricing-header p {
     font-size: 14px;
   }
-  .pricing .container .item {
+  .pricing .container .items {
+    display: flex;
+    flex-direction: column;
     max-width: 330px;
     width: 100%;
-    margin-bottom: 20px;
+  }
+  .pricing .container .item {
     padding: 40px;
+    margin: 0 0 20px;
+  }
+  .pricing .container .item .plan-button {
+    margin: 0;
+  }
+  .pricing .container .item .plan-button h4 {
+    font-weight: 500;
   }
   .locations .locations-header {
     max-width: 270px;
@@ -209,9 +219,19 @@
     width: 100%;
     height: 100%;
   }
+  .testimonials .testimonial-header {
+    text-align: center;
+  }
+  .testimonials .testimonial-header h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  .testimonials .testimonial-header p {
+    font-size: 14px;
+    line-height: 30px;
+  }
   .testimonials .testimonial {
     max-width: none;
-    margin: 0;
     padding: 15px;
   }
   .testimonials .testimonial .customer-name h4 {
@@ -282,6 +302,11 @@
   }
   .small-nav-activated {
     right: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .testimonial {
+    min-width: 400px;
   }
 }
 

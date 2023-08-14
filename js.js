@@ -1,22 +1,54 @@
 var slider = tns({
-    container: '.tiny-slider',
+    container: "#base",
     items: 3,
-    slideBy: 'page',
     speed: 500,
+    slideBy: 1,
+    loop: true,
     responsive: {
-        640: {
-            edgePadding: 20,
-            gutter: 20,
-            items: 2
+        0: {
+            items: 1,
         },
         700: {
-            gutter: 30
+            fixedWidth: 400,
+            gutter: 50,
         },
-        900: {
-            items: 3
+        1000: {
+
         }
     },
 });
+slider.goTo(3);
+
+
+let testimonial = document.querySelector('.testimonial');
+let testimonialCol = document.querySelector('.testimonial-col');
+
+
+console.log(testimonialCol.classList)
+
+if (testimonialCol.classList.contains('tns-slide-active')) {
+    console.log(true)
+} else {
+    console.log(false)
+}
+
+// let testimonials = document.getElementById('testimonials');
+// testimonials.addEventListener('click', ()=> {
+//     console.log(slider.getInfo())
+// })
+
+
+let divContainer = document.createElement('div');
+divContainer.classList.add('container');
+
+let tnsControls = document.querySelector('.tns-controls');
+let tnsNav = document.querySelector('.tns-nav');
+
+divContainer.appendChild(tnsNav);
+divContainer.appendChild(tnsControls);
+
+let tnsOuter = document.querySelector('.tns-outer');
+tnsOuter.insertAdjacentElement('afterend', divContainer);
 
 
 let smallNavContainer = document.getElementById('small-nav-container');
@@ -91,3 +123,66 @@ smallNavButton.addEventListener('click', () => {
 
     }
 })
+
+
+// plans
+let freePlan = document.getElementById('free-plan');
+let freePlanBtn = document.getElementById('free-plan-btn');
+freePlanBtn.addEventListener('click', () => {
+    if (freePlan.classList.contains('activated-col')) {
+
+        freePlan.classList.remove('activated-col')
+
+        freePlan.style.border = '2px solid #f53838';
+
+        freePlan.classList.add('stop-col');
+    } else if (freePlan.classList.contains('stop-col')) {
+        freePlan.classList.remove('stop-col');
+
+        freePlan.style.border = '2px solid #dddddd';
+
+        freePlan.classList.add('activated-col');
+
+    }
+})
+
+let standardPlan = document.getElementById('standard-plan');
+let standardPlanBtn = document.getElementById('standard-plan-btn');
+standardPlanBtn.addEventListener('click', () => {
+    if (standardPlan.classList.contains('activated-col')) {
+
+        standardPlan.classList.remove('activated-col')
+
+        standardPlan.style.border = '2px solid #f53838';
+
+        standardPlan.classList.add('stop-col');
+    } else if (standardPlan.classList.contains('stop-col')) {
+        standardPlan.classList.remove('stop-col');
+
+        standardPlan.style.border = '2px solid #dddddd';
+
+        standardPlan.classList.add('activated-col');
+
+    }
+})
+
+let premiumPlan = document.getElementById('premium-plan');
+let premiumPlanBtn = document.getElementById('premium-plan-btn');
+premiumPlanBtn.addEventListener('click', () => {
+    if (premiumPlan.classList.contains('activated-col')) {
+
+        premiumPlan.classList.remove('activated-col')
+
+        premiumPlan.style.border = '2px solid #f53838';
+
+        premiumPlan.classList.add('stop-col');
+    } else if (premiumPlan.classList.contains('stop-col')) {
+        premiumPlan.classList.remove('stop-col');
+
+        premiumPlan.style.border = '2px solid #dddddd';
+
+        premiumPlan.classList.add('activated-col');
+
+    }
+})
+

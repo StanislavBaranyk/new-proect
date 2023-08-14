@@ -41,6 +41,10 @@ a {
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
+  line-height: 41px;
+}
+.header .header-nav .nav-link:hover {
+  color: #f53838;
 }
 .header .header-nav .nav-item:not(:last-child) {
   margin-right: 40px;
@@ -50,14 +54,21 @@ a {
   font-weight: 600;
   color: black;
   text-decoration: none;
+  line-height: 41px;
 }
 .header .header-sign .red-button {
-  border: 1px solid #f53838;
+  border: 2px solid #f53838;
   color: #f53838;
   font-weight: 600;
   padding: 13px 45px;
   border-radius: 100px;
   text-decoration: none;
+  background: white;
+  line-height: 41px;
+}
+.header .header-sign .red-button:hover {
+  background: #f53838;
+  color: white;
 }
 
 .entry {
@@ -66,6 +77,7 @@ a {
 .entry .container {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
 }
 .entry .item {
   max-width: 550px;
@@ -73,6 +85,9 @@ a {
 }
 .entry .item img {
   width: 100%;
+}
+.entry .entry-page {
+  display: flex;
 }
 .entry .entry-text-content h1 {
   font-size: 50px;
@@ -96,12 +111,16 @@ a {
 .entry .entry-text-content .entry-button {
   color: white;
   background: #f53838;
+  border-color: none;
   border-radius: 10px;
   box-shadow: 0 20px 40px rgba(245, 56, 56, 0.35);
   padding: 21px 75px;
   font-weight: 700;
   text-decoration: none;
   display: inline-block;
+}
+.entry .entry-text-content .entry-button:hover {
+  background: #0b132a;
 }
 
 .about .container {
@@ -189,7 +208,7 @@ a {
 .pricing {
   background-color: #fbfbfb;
 }
-.pricing .container {
+.pricing .items {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -207,12 +226,17 @@ a {
 .pricing .pricing-header p {
   color: #4f5665;
   text-align: center;
+  line-height: 30px;
+}
+.pricing .standard-plan {
+  margin: 0 20px;
 }
 .pricing .item {
-  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 330px;
+  width: 100%;
   padding: 80px 40px;
   border: 2px solid #dddddd;
   border-radius: 10px;
@@ -249,13 +273,21 @@ a {
   font-weight: 400;
 }
 .pricing .item .plan-button .red-button {
-  border: 1px solid #f53838;
+  border: 2px solid #f53838;
   color: #f53838;
   font-weight: 600;
   padding: 13px 45px;
   border-radius: 100px;
   text-decoration: none;
+  background: white;
   padding: 12px 63px;
+  font-size: 16px;
+  font-weight: 900;
+}
+.pricing .item .plan-button .red-button:hover {
+  background: #f53838;
+  color: white;
+  transition: 200ms;
 }
 .pricing .item .plan-button-two {
   margin-top: 36px;
@@ -281,6 +313,9 @@ a {
   text-align: center;
   line-height: 30px;
 }
+.locations .locations-map img {
+  width: 100%;
+}
 .locations .sponsored {
   display: flex;
   flex-direction: row;
@@ -298,6 +333,26 @@ a {
   object-fit: cover;
 }
 
+.testimonials .container .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+.testimonials .testimonials-header {
+  max-width: 555px;
+  width: 100%;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+.testimonials .testimonials-header h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.testimonials .testimonials-header p {
+  line-height: 30px;
+  color: #4f5665;
+}
 .testimonials .item {
   display: flex;
   flex-direction: row;
@@ -310,6 +365,7 @@ a {
 .testimonials .testimonial-header .customer-name h4 {
   font-size: 18px;
   font-weight: 500;
+  color: #0b132a;
 }
 .testimonials .testimonial-header .customer-name p {
   color: #4f5665;
@@ -324,20 +380,14 @@ a {
   margin-left: 11px;
 }
 .testimonials .testimonial-body {
-  color: #4f5665;
+  color: #0b132a;
   line-height: 30px;
 }
 .testimonials .testimonial {
-  width: auto;
   padding: 30px;
   border-radius: 10px;
   border: 2px solid #dddddd;
   height: 250px;
-}
-.testimonials .tns-controls {
-  position: absolute;
-  margin-top: 300px;
-  margin-left: 67%;
 }
 .testimonials .tns-controls button {
   width: 60px;
@@ -363,10 +413,6 @@ a {
   background-position-y: 19px;
   background-color: #f53838;
 }
-.testimonials .tns-nav {
-  position: absolute;
-  margin-top: 330px;
-}
 .testimonials .tns-nav button:not(:last-child) {
   margin-right: 10px;
 }
@@ -376,6 +422,7 @@ a {
   background: #ddd;
   border: 0;
   border-radius: 50%;
+  margin-top: calc(50% - 15px);
 }
 .testimonials .tns-nav button:last-child {
   display: initial !important;
@@ -384,9 +431,6 @@ a {
   background: #f53838;
 }
 
-.help {
-  margin-top: 150px;
-}
 .help .container {
   position: absolute;
   left: calc(50% - 550px);
@@ -426,6 +470,9 @@ a {
   font-size: 16px;
   text-decoration: none;
   font-weight: 500;
+}
+.help .subscribe .subscribe-right a:hover {
+  background: #0b132a;
 }
 
 footer {

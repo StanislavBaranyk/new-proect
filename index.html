@@ -6,54 +6,54 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="adaptive.css" rel="stylesheet" type="text/css">
 
+    <style>
 
-</head>
-<style>
-
-    @font-face {
+      @font-face {
         font-family: 'Rubik';
         src: url("static/Rubik-Light.ttf") format("opentype");
         font-weight: 300;
-    }
+      }
 
-    @font-face {
+      @font-face {
         font-family: 'Rubik';
         src: url("static/Rubik-Regular.ttf") format("opentype");
         font-weight: 400;
-    }
+      }
 
-    @font-face {
+      @font-face {
         font-family: 'Rubik';
         src: url("static/Rubik-Medium.ttf") format("opentype");
         font-weight: 500;
-    }
+      }
 
-    @font-face {
+      @font-face {
         font-family: 'Rubik';
         src: url("static/Rubik-SemiBold.ttf") format("opentype");
         font-weight: 600;
-    }
+      }
 
-    @font-face {
+      @font-face {
         font-family: 'Rubik';
         src: url("static/Rubik-Bold.ttf") format("opentype");
         font-weight: 700;
-    }
+      }
 
-    @font-face {
+      @font-face {
         font-family: 'Rubik';
         src: url("static/Rubik-Black.ttf") format("opentype");
         font-weight: 900;
-    }
+      }
 
 
-    body {
+      body {
         font-family: "Rubik", sans-serif;
-    }
-</style>
+      }
+    </style>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="adaptive.css" rel="stylesheet" type="text/css">
+</head>
+
 <body>
 
 
@@ -70,18 +70,17 @@
 </div>
 
 
-
 <header class="header">
     <div class="container">
         <div class="header-logo">
             <img src="images/logo.svg">
         </div>
         <nav class="header-nav" id="small-nav">
-                    <a class="nav-link nav-item" href="#about">About</a>
-                    <a class="nav-link nav-item " href="#features">Features</a>
-                    <a class="nav-link nav-item" href="#pricing">Pricing</a>
-                    <a class="nav-link nav-item" href="#testimonials">Testimonials</a>
-                    <a class="nav-link nav-item" href="#help">Help</a>
+            <a class="nav-link nav-item" href="#about">About</a>
+            <a class="nav-link nav-item " href="#features">Features</a>
+            <a class="nav-link nav-item" href="#pricing">Pricing</a>
+            <a class="nav-link nav-item" href="#testimonials">Testimonials</a>
+            <a class="nav-link nav-item" href="#help">Help</a>
         </nav>
         <div class="header-sign">
             <a href="#" class="white-button">Sign In</a>
@@ -161,64 +160,66 @@
                 and cheerfully.
             </p>
         </div>
-        <div id="free-plan" class="item">
-            <div class="plan-image">
-            <img src="images/free-plan.svg">
-            </div>
-            <h2>Free Plan</h2>
-            <div class="plan-features">
-            <ul>
-                <li>Unlimited Bandwitch</li>
-                <li>Encrypted Connection</li>
-                <li>No Traffic Logs</li>
-                <li>Works on All Devices</li>
-            </ul>
-            </div>
-            <div class="plan-button">
-                <h4>Free</h4>
-                <button type="button" class="red-button">Select</button>
-            </div>
-        </div>
-
-        <div id="standard-plan" class="item">
-            <div class="plan-image">
-                <img src="images/free-plan.svg">
-            </div>
-            <h2>Standard Plan</h2>
-            <div class="plan-features">
-                <ul>
-                    <li>Unlimited Bandwitch</li>
-                    <li>Encrypted Connection</li>
-                    <li>Yes Traffic Logs</li>
-                    <li>Works on All Devices</li>
-                    <li>Connect Anywhere</li>
-                </ul>
-            </div>
-            <div class="plan-button  plan-button-two">
-                <h4>$9 <span>/ mo</span></h4>
-                <button type="button" class="red-button">Select</button>
+        <div class="items">
+            <div id="free-plan" class="item activated-col">
+                <div class="plan-image">
+                    <img src="images/free-plan.svg">
+                </div>
+                <h2>Free Plan</h2>
+                <div class="plan-features">
+                    <ul>
+                        <li>Unlimited Bandwitch</li>
+                        <li>Encrypted Connection</li>
+                        <li>No Traffic Logs</li>
+                        <li>Works on All Devices</li>
+                    </ul>
+                </div>
+                <div class="plan-button">
+                    <h4>Free</h4>
+                    <button type="button" class="red-button" id="free-plan-btn">Select</button>
+                </div>
             </div>
 
+            <div id="standard-plan" class="item standard-plan activated-col">
+                <div class="plan-image">
+                    <img src="images/free-plan.svg">
+                </div>
+                <h2>Standard Plan</h2>
+                <div class="plan-features">
+                    <ul>
+                        <li>Unlimited Bandwitch</li>
+                        <li>Encrypted Connection</li>
+                        <li>Yes Traffic Logs</li>
+                        <li>Works on All Devices</li>
+                        <li>Connect Anywhere</li>
+                    </ul>
+                </div>
+                <div class="plan-button  plan-button-two">
+                    <h4>$9 <span>/ mo</span></h4>
+                    <button type="button" id="standard-plan-btn" class="red-button">Select</button>
+                </div>
+
             </div>
 
-        <div id="premium-plan" class="item">
-            <div class="plan-image">
-                <img src="images/free-plan.svg">
-            </div>
-            <h2>Premium Plan</h2>
-            <div class="plan-features">
-                <ul>
-                    <li>Unlimited Bandwitch</li>
-                    <li>Encrypted Connection</li>
-                    <li>Yes Traffic Logs</li>
-                    <li>Works on All Devices</li>
-                    <li>Connect Anywhere</li>
-                    <li>Get New Features</li>
-                </ul>
-            </div>
-            <div class="plan-button plan-button-three">
-                <h4> $12 <span>/ mo</span></h4>
-                <button type="button" class="red-button">Select</button>
+            <div id="premium-plan" class="item activated-col">
+                <div class="plan-image">
+                    <img src="images/free-plan.svg">
+                </div>
+                <h2>Premium Plan</h2>
+                <div class="plan-features">
+                    <ul>
+                        <li>Unlimited Bandwitch</li>
+                        <li>Encrypted Connection</li>
+                        <li>Yes Traffic Logs</li>
+                        <li>Works on All Devices</li>
+                        <li>Connect Anywhere</li>
+                        <li>Get New Features</li>
+                    </ul>
+                </div>
+                <div class="plan-button plan-button-three">
+                    <h4> $12 <span>/ mo</span></h4>
+                    <button type="button" id="premium-plan-btn" class="red-button">Select</button>
+                </div>
             </div>
         </div>
     </div>
@@ -260,84 +261,98 @@
 
 <section class="testimonials" id="testimonials">
     <div class="container">
-        <div class="tiny-slider">
-        <div class="testimonial" id="testimonial-one">
-            <div class="testimonial-header item">
-                <div class="customer-photo">
-                    <img src="images/customer-1.png">
-                </div>
-                <div class="customer-name">
-                    <h4>Viezh Robert</h4>
-                    <p>Warsaw, Poland</p>
-                </div>
-                <div class="customer-rating">
-                   4.5
-                </div>
-            </div>
-                <div class="testimonial-body">
-
-                    “Wow... I am very happy to use this VPN, it turned out to be more
-                    than my expectations and so far there have been no problems.
-                    LaslesVPN always the best”.
-                </div>
+        <div class="testimonials-header">
+            <h2>
+                Trusted by Thousands of Happy Customer
+            </h2>
+            <p>
+                These are the stories of our customers who have joined us with great
+                pleasure when using this crazy feature.
+            </p>
         </div>
-        <div class="testimonial" id="testimonial-two">
-            <div class="testimonial-header item">
-                <div class="customer-photo">
-                    <img src="images/customer-2.png">
-                </div>
-                <div class="customer-name">
-                    <h4>Yessica Christy</h4>
-                    <p>Shanxi, China</p>
-                </div>
-                <div class="customer-rating">
-                    4.5
+        <div id="base">
+            <div class="testimonial-col">
+                <div class="testimonial" id="testimonial-one">
+                    <div class="testimonial-header item">
+                        <div class="customer-photo">
+                            <img src="images/customer-1.png">
+                        </div>
+                        <div class="customer-name">
+                            <h4>Viezh Robert</h4>
+                            <p>Warsaw, Poland</p>
+                        </div>
+                        <div class="customer-rating">
+                            4.5
+                        </div>
+                    </div>
+                    <div class="testimonial-body">
+
+                        “Wow... I am very happy to use this VPN, it turned out to be more
+                        than my expectations and so far there have been no problems.
+                        LaslesVPN always the best”.
+                    </div>
                 </div>
             </div>
-            <div class="testimonial-body">
-                “I like it because I like to travel far and still can connect with
-                high speed.”.
+            <div class="testimonial-col">
+                <div class="testimonial" id="testimonial-two">
+                    <div class="testimonial-header item">
+                        <div class="customer-photo">
+                            <img src="images/customer-2.png">
+                        </div>
+                        <div class="customer-name">
+                            <h4>Yessica Christy</h4>
+                            <p>Shanxi, China</p>
+                        </div>
+                        <div class="customer-rating">
+                            4.5
+                        </div>
+                    </div>
+                    <div class="testimonial-body">
+                        “I like it because I like to travel far and still can connect with
+                        high speed.”.
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <div class="testimonial" id="testimonial-three">
+                    <div class="testimonial-header item">
+                        <div class="customer-photo">
+                            <img src="images/customer-3.png">
+                        </div>
+                        <div class="customer-name">
+                            <h4>Kim Young Jou</h4>
+                            <p>Seoul, South Korea</p>
+                        </div>
+                        <div class="customer-rating">
+                            4.5
+                        </div>
+                    </div>
+                    <div class="testimonial-body">
+
+                        “This is very unusual for my business that currently requires a
+                        virtual private network that has high security.”.
+
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="testimonial" id="testimonial-three">
-            <div class="testimonial-header item">
-                <div class="customer-photo">
-                    <img src="images/customer-3.png">
-                </div>
-                <div class="customer-name">
-                    <h4>Kim Young Jou</h4>
-                    <p>Seoul, South Korea</p>
-                </div>
-                <div class="customer-rating">
-                    4.5
-                </div>
-            </div>
-            <div class="testimonial-body">
-
-                “This is very unusual for my business that currently requires a
-                virtual private network that has high security.”.
-
-            </div>
-        </div>
-    </div>
-
     </div>
 </section>
-    <section class="help" id="help">
-        <div class="container">
-            <div class="subscribe">
-                <div class="subscribe-left">
-                    <h4>
-                        Subscribe Now for Get Special Features!
-                    </h4>
-                    <p>Let's subscribe with us and find the fun.</p>
-                </div>
-                <div class="subscribe-right">
-                    <a href="#">Subscribe Now</a>
-                </div>
+<section class="help" id="help">
+    <div class="container">
+        <div class="subscribe">
+            <div class="subscribe-left">
+                <h4>
+                    Subscribe Now for Get Special Features!
+                </h4>
+                <p>Let's subscribe with us and find the fun.</p>
+            </div>
+            <div class="subscribe-right">
+                <a href="#">Subscribe Now</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 <footer>
     <div class="container">
         <div>
@@ -416,7 +431,6 @@
         </div>
     </div>
 </footer>
-
 
 
 <script src="js.js"></script>
